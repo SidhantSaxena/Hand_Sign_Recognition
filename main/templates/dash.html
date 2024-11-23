@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff0e6; /* Cream color */
+    }
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 10vh;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: #f0f0f0;
+      margin-bottom: 20px;
+    }
+
+    .logout button{
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    .body > div {
+      flex: 1;
+      overflow: hidden;
+      display: flex;
+    }
+
+    #value{
+      font-family: sans-serif;
+      font-size: 30px;
+      text-align: center;
+      margin: auto;
+    }
+    #mode{
+      text-align: center;
+      margin: auto;
+      font-size: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logout">
+        <button id="logoutButton" onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </div>
+  <img id="bg" src="{{url_for('video_feed')}}" class="center">
+  <div id="mode" style="color: black;"></div>
+  <div id="value" style="color: black;"></div>
+  <script>
+
+    function logout() {
+            window.location.href = "{{url_for('logout')}}";
+    }
+
+    place = document.querySelector("#value");
+    modes = document.querySelector("#mode");
+    setInterval(function(){
+      console.log("run function");
+      fetch("/result")
+      .then(response => response.json())
+      .then(data => {
+          document.getElementById('value').innerText="";
+          if(data!=null){
+            place.innerText += data;
+          }
+      })
+      fetch("/mode_shift")
+      .then(response=>response.json())
+      .then(mode=>{
+        modes.innerText=mode;
+      })
+  }, 40);
+  </script>
+</body>
+</html>
