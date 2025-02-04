@@ -1,5 +1,5 @@
 # **About**  
-It is a web platform app that aims to predict/translate hand signs of people with speech disabilities into words.  
+It is a web platform app that aims to predict/translate hand signs of people with speech disabilities into words. Made leveraging Flask.
 
 ---
 
