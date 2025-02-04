@@ -1,7 +1,3 @@
-Here’s the revised version with the corrections and improvements:  
-
----
-
 # **About**  
 It is a web platform app that aims to predict/translate hand signs of people with speech disabilities into words.  
 
@@ -47,4 +43,4 @@ Both models are trained using the extracted data and saved inside the **Model** 
 ---
 
 # **Sample Output**
-![](https://github.com/SidhantSaxena/Hand_Sign_Recognition/blob/main/fogif.gif)
+![](fogif.gif)
