@@ -3,6 +3,11 @@ It is a web platform app that aims to predict/translate hand signs of people wit
 
 ---
 
+# **Modes**  
+The user can switch between **Alphabet Mode** and **Gesture Mode** by pressing the **Shift** button on their keyboard.  
+
+---
+
 # **Data Collection**  
 Feature extraction is done using **MediaPipe**, where **3D key points** are extracted from both **left and right hands** along with **shoulders**. These points are **normalized with respect to the wrist position by default**, making them more tolerant to variations in hand positions. This normalization improves the robustness of dynamic gesture recognition.  
 
@@ -13,11 +18,6 @@ This project is trained with hand sign/gesture data for:
 - **Alphabets**: A-Z  
 
 This setup is easily scalable for additional signs and gestures.  
-
----
-
-# **Modes**  
-The user can switch between **Alphabet Mode** and **Gesture Mode** by pressing the **Shift** button on their keyboard.  
 
 ---
 
