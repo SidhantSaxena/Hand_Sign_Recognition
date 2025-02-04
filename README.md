@@ -42,4 +42,9 @@ Both models are trained using the extracted data and saved inside the **Model** 
 
 # **Evaluation**  
 - **Gesture Model Evaluation**: Performed inside the **model development notebook**.  
-- **Alphabet Model Evaluation**: Conducted separately in the **evaluation notebook**.  
+- **Alphabet Model Evaluation**: Conducted separately in the **evaluation notebook**.
+
+---
+
+# **Sample Output**
+![](https://github.com/SidhantSaxena/Hand_Sign_Recognition/blob/main/fogif.gif)
